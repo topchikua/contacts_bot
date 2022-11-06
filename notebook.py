@@ -159,11 +159,11 @@ def name_update(message):
         if temp[i]['name'] == message.text or temp[i]['phone'] == message.text:
             x += 1
             msg = (
-                f"<b>Name:</b> {temp[i]['name']}\n"
-                f"<b>Surname:</b> {temp[i]['surname']}\n"
-                f"<b>📱 Phone:</b> {temp[i]['phone']}\n"
+                f"<b>Имя:</b> {temp[i]['name']}\n"
+                f"<b>Фамилия:</b> {temp[i]['surname']}\n"
+                f"<b>📱 Мобильный:</b> {temp[i]['phone']}\n"
                 f"<b>📧 Email:</b> {temp[i]['email']}\n"
-                f"<b>🪪 Birt Day:</b> {temp[i]['age']}")
+                f"<b>🪪 День рождения:</b> {temp[i]['age']}")
             bot.send_message(message.chat.id, msg, parse_mode="html")
     if x == 0:
         bot.send_message(message.chat.id, 'Поиск завершен. Найденных контактов: 0',
