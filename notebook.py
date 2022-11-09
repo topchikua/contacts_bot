@@ -216,6 +216,7 @@ def start_ex(message):
             else:
                 bot.send_message(message.chat.id, 'Список контактов пуст')
         elif message.text == 'По имени' or message.text == 'По фамилии':
+            temp = []
             if message.text == 'По имени':
                 temp = sorted(check_contacts(message.chat.id), key=lambda k: k['name'])
             elif message.text == 'По фамилии':
